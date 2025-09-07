@@ -57,7 +57,7 @@ body {
 
 main {
   background: var(--white);
-  height: fit-content;
+  height: calc(100dvh - 3rem);
 
   @media (width > 740px) {
     width: 740px;

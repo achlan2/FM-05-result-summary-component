@@ -14,6 +14,16 @@
   --light-lavender: hsl(241, 100%, 89%);
   --dark-grey-blue: hsl(224, 30%, 27%);
 
+  --gradient-light: linear-gradient(
+    180deg,
+    hsl(252, 100%, 67%) -20%,
+    hsl(241, 81%, 54%) 80%
+  );
+  --gradient-violet: linear-gradient(
+    hsla(256, 72%, 46%, 1) -20%,
+    hsla(241, 72%, 46%, 0)
+  );
+
   --font-normal: 1rem;
   --font-large: 1.2rem;
   --font-xl: 3.5rem;
@@ -59,11 +69,7 @@ main {
 }
 
 .card-result {
-  background: linear-gradient(
-    180deg,
-    hsl(252, 100%, 67%) -20%,
-    hsl(241, 81%, 54%) 80%
-  );
+  background: var(--gradient-light);
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
   display: flex;
@@ -81,10 +87,7 @@ main {
 }
 
 .result-circle {
-  background: linear-gradient(
-    hsla(256, 72%, 46%, 1) -20%,
-    hsla(241, 72%, 46%, 0)
-  );
+  background: var(--gradient-violet);
   border-radius: 50%;
   padding: 1.5em;
   display: flex;
@@ -210,9 +213,14 @@ button {
   font-weight: var(--font-weight-bold);
   font-size: var(--font-normal);
   margin-top: 1.5rem;
+  cursor: pointer;
 
   @media (width > 740px) {
     margin-top: 2.75rem;
+  }
+
+  &:hover {
+    background: var(--gradient-light);
   }
 }
 
